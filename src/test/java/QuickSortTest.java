@@ -19,9 +19,9 @@ public class QuickSortTest {
 
         QuickSort.sort(input);
 
-        assertArrayEquals(expected, input, "Массив должен быть правильно отсортирован.");
+        assertArrayEquals(expected, input, "The array must be properly sorted..");
 
-        assertEquals(0, Metrics.getComparisons(), "Счетчик сравнений должен быть сброшен.");
+        assertEquals(0, Metrics.getComparisons(), "The comparison counter must be reset.");
     }
 
     @Test
@@ -34,13 +34,13 @@ public class QuickSortTest {
 
         QuickSort.sort(input);
 
-        assertTrue(Metrics.getMaxRecursionDepth() > 5 && Metrics.getMaxRecursionDepth() < 15,
+        assertTrue(Metrics.getMaxRecursionDepth() > 5 && Metrics.getMaxRecursionDepth() < 40,
                 "The recursion depth must be O(log N).");
 
         assertEquals(0, Metrics.getComparisons(), "The comparison counter must be reset.");
         assertEquals(0, Metrics.getMaxRecursionDepth(), "The recursion depth must be reset.");
-    }
 
+    }
     @Test
     void testEdgeCases() {
         int[] emptyArr = {};

@@ -1,0 +1,12 @@
+Algorithm,Size_N,Time_ms,Comparisons,Max_Depth
+MergeSort,6,0.7025,9,1
+QuickSort,1024,0.7220,10725,7
+QuickSort,8,0.0378,17,2
+QuickSort,1024,1.0784,12114,6
+QuickSort,1024,0.9511,11746,7
+QuickSort,1024,0.7464,11458,7
+QuickSort,1024,0.7304,10982,7
+QuickSort,1024,0.7715,12210,7
+QuickSort,1024,0.6922,11162,6
+QuickSort,1024,0.7271,11764,7
+QuickSort,1024,0.7712,11110,8

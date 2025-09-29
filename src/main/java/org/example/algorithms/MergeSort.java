@@ -1,6 +1,7 @@
 package org.example.algorithms;
 
 import org.example.metrics.Metrics;
+import org.example.utils.ArrayUtils;
 
 public class MergeSort {
 
@@ -31,7 +32,7 @@ public class MergeSort {
             }
 
             if (high - low + 1 <= CUTOFF) {
-                insertionSort(array, low, high);
+                ArrayUtils.insertionSort(array, low, high);
                 return;
             }
             int mid = low + (high - low) / 2;
@@ -68,27 +69,4 @@ public class MergeSort {
             }
         }
     }
-
-
-    private static void insertionSort(int[] array, int low, int high) {
-        for (int i = low + 1; i <= high; i++) {
-            for (int j = i; j > low; j--) {
-                Metrics.incrementComparisons();
-
-                if (array[j] < array[j - 1]) {
-                    swap(array, j, j - 1);
-                } else {
-                    break;
-                }
-            }
-        }
-    }
-
-
-    private static void swap(int[] array, int i, int j) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-
 }
